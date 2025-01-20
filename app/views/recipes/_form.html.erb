@@ -1,0 +1,36 @@
+<%= form_with(model: recipe, class: "space-y-6 w-full bg-white rounded-lg p-6") do |form| %>
+  <% if recipe.errors.any? %>
+    <div class="bg-red-50 border-l-4 border-red-500 p-4 text-red-700 rounded">
+      <h2 class="font-bold mb-2"><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+      <ul class="list-disc list-inside">
+        <% recipe.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, "Recipe Title", class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :title,
+                        class: "mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
+  </div>
+
+  <div>
+    <%= form.label :image, "Image URL", class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :image,
+                        class: "mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
+  </div>
+
+  <div>
+    <%= form.label :image_type, "Image Type", class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :image_type,
+                        class: "mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
+  </div>
+
+
+  <div class="flex justify-end">
+    <%= form.submit "Save Recipe",
+                    class: "bg-blue-500 text-white px-6 py-2 rounded-md shadow hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 focus:outline-none" %>
+  </div>
+<% end %>
