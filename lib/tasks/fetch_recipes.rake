@@ -1,5 +1,4 @@
 namespace :fetch_recipes do
-
   desc "Fetch recipes and their details from Spoonacular API and save them to the database"
 
   task store: :environment do
@@ -8,7 +7,6 @@ namespace :fetch_recipes do
 
     if response.success?
       response["results"].each do |result|
-
         recipe = Recipe.find_or_create_by(spoonacular_id: result["id"])
         recipe.update!(
           title: result["title"],

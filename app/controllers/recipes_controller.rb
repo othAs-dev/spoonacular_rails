@@ -6,7 +6,6 @@ class RecipesController < ApplicationController
   # GET /recipes or /recipes.json
   def index
     @recipes = Recipe.all
-
   end
 
   # GET /recipes/1 or /recipes/1.json
@@ -54,6 +53,6 @@ class RecipesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def recipe_params
-      params.expect(recipe: [ :title, :image, :image_type])
+      params.expect(recipe: [ :title, :image, :image_type ])
     end
 end
