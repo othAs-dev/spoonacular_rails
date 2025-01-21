@@ -1,6 +1,6 @@
 namespace :fetch_recipes do
 
-  desc "Fetch random recipes and their details from Spoonacular API and save them to the database"
+  desc "Fetch recipes and their details from Spoonacular API and save them to the database"
 
   task store: :environment do
     service = SpoonacularService.new
@@ -27,12 +27,12 @@ namespace :fetch_recipes do
             )
           end
         else
-          puts "Failed to fetch details for recipe ID #{result['id']}: #{details_response['message']}"
+          puts "Failed to fetch ingredients for recipe ID #{result["id"]}: #{details_response['message']}"
         end
       end
-      puts "Recipes and details saved to the database!"
+      puts "Recipes and ingredients saved to the database!"
     else
-      puts "Failed to fetch recipes: #{response['message']}"
+      puts "Failed to fetch recipes: #{response["message"]}"
     end
   end
 end

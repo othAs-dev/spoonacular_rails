@@ -3,13 +3,13 @@ source "https://rubygems.org"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.1"
 # MongoDB data base
-gem 'mongoid'
+gem "mongoid"
 
 # Use Dotenv to load environment variables from .env into ENV in development
-gem 'dotenv-rails', groups: %i[development test]
+gem "dotenv-rails", groups: %i[development test]
 
 # httpParty for API requests
-gem 'httparty'
+gem "httparty"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use the Puma web server [https://github.com/puma/puma]
