@@ -1,7 +1,7 @@
 <%= form_with(model: recipe, class: "space-y-6 w-full bg-white rounded-lg p-6") do |form| %>
   <% if recipe.errors.any? %>
     <div class="bg-red-50 border-l-4 border-red-500 p-4 text-red-700 rounded">
-      <h2 class="font-bold mb-2"><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+      <h2 class="font-bold mb-2">Error</h2>
       <ul class="list-disc list-inside">
         <% recipe.errors.each do |error| %>
           <li><%= error.full_message %></li>

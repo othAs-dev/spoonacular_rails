@@ -20,14 +20,14 @@
       </span>
     </div>
     <% if @ingredients.any? %>
-      <h2>Ingrédients :</h2>
+      <h2>Ingrdients :</h2>
       <ul>
         <% @ingredients.each do |ingredient| %>
           <li><%= "#{ingredient.amount} #{ingredient.unit} de #{ingredient.name}" %></li>
         <% end %>
       </ul>
     <% else %>
-      <p>Aucun ingrédient n'est présent pour cette recette.</p>
+      <p>There are no ingredients for this recipe</p>
     <% end %>
       </div>
 
