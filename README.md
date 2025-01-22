@@ -42,6 +42,8 @@ To launch the application, run the following command:
 
 This command starts the application and runs the **Rake task** to fetch data from the API and store it in the database.
 
+**Important:**
+Ensure a MongoDB instance is running on port **27017** and configured with the database name **recipes_development**
 
 ## Notes
 
